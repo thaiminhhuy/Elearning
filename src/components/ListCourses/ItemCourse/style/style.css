@@ -1,0 +1,140 @@
+.course {
+  padding: 30px;
+  position: relative !important;
+  width: 14em !important;
+  color: white;
+}
+.course:hover {
+  z-index: 1;
+}
+.course:hover .front {
+  transform: translateY(-20%) scale(0.8);
+  color: white;
+}
+.course .course__img {
+  border-radius: 0.5em;
+  width: 100%;
+
+  height: 100px;
+}
+.contain-viewers-img {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.course:hover .contain-viewers-img {
+  display: none;
+}
+.contain-img {
+  display: flex;
+}
+
+.contain-img .contain__img {
+  max-width: 100%;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  border: 2px solid #0d1113;
+}
+.contain-img .contain__img::nth-of-type(1) {
+  transform: translate(50%);
+  z-index: 1;
+}
+.contain-img .contain__img::nth-of-type(2) {
+  transform: translate(25%);
+  z-index: 1;
+}
+
+.course .name-course {
+  white-space: nowrap;
+}
+.course:hover .name-course {
+  color: white;
+  animation: gameName 250ms forwards;
+}
+@keyframes gameName {
+  0% {
+    text-align: center;
+    opacity: 1;
+  }
+  20% {
+    text-align: center;
+    opacity: 0;
+  }
+  50% {
+    text-align: center;
+    opacity: 0;
+  }
+  100% {
+    text-align: center;
+    opacity: 1;
+  }
+}
+
+.course .views {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.course .startandview {
+  font-size: 0.725rem;
+  text-align: center;
+  padding: 0.3rem;
+}
+
+.course .back {
+  opacity: 0;
+  position: absolute;
+  bottom: 5%;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.course .back span {
+  font-size: 1rem;
+  display: block;
+}
+.course:hover .back {
+  opacity: 1;
+  bottom: 0;
+}
+
+.course:hover .colorStyle {
+  color: #fff;
+  text-decoration: none !important;
+}
+.course .back .colorStyle {
+  text-decoration: none !important;
+}
+
+.course .coursesInfor {
+  columns: 2;
+  column-rule: 1px solid white;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.course .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  transform: scale(0.2, 0.9);
+  transition: 250ms;
+  border-radius: 0.5em;
+  opacity: 0;
+}
+.course:hover .background {
+  background: #009e7f;
+  transition: transform 250ms ease-in-out, opacity 100ms linear;
+  opacity: 1;
+  transform: scale(1, 0.5);
+  display: block;
+  min-height: 350px;
+  border-radius: 0.5rem;
+}
